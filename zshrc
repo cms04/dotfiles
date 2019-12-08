@@ -21,18 +21,6 @@ compinit
 # Add own bin and script folder to PATH
 export PATH=$PATH:'/home/christian/bin:/home/christian/scripts'
 
-
-alias nano='nano -w'
-
-# Git Aliases
-alias gits='git status'
-alias gith='git log --oneline --abbrev-commit --all --graph --decorate'
-
-# ls Aliases
-alias ls='ls --color=auto'
-alias ll='lsd -lah'
-alias l='lsd -lh'
-
 # Short Alias for reflector
 alias reflector='sudo reflector --verbose -l 5 -p https --sort rate --save /etc/pacman.d/mirrorlist'
 
@@ -87,6 +75,16 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%}"
 
 # source syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+alias nano='nano -w'
+
+# Git Aliases
+alias gits='git status'
+alias gith='git log --oneline --abbrev-commit --all --graph --decorate'
+
+# ls Aliases
+alias ls='ls --color=auto'
+alias ll='lsd -lah'
+alias l='lsd -lh'
 
 # exec screenfetch
 screenfetch
