@@ -66,7 +66,7 @@ source $ZSH/oh-my-zsh.sh
 # set Prompt
 PROMPT='
 %{$fg[white]%}%3~ %{$reset_color%}$(git_prompt_info)
-%{$fg[yellow]%} 🏝  %{$reset_color%}'
+%(?:%{$fg_bold[yellow]%} 🏝  :%{$fg_bold[red]%} 🏝  )%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}on %{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
