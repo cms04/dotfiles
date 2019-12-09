@@ -86,5 +86,5 @@ alias ls='ls --color=auto'
 alias ll='lsd -lah'
 alias l='lsd -lh'
 
-# exec screenfetch
-screenfetch
+# exec neofetch
+neofetch
