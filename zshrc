@@ -47,8 +47,8 @@ plugins=(
   docker-compose
   docker-machine
   git
+  git-prompt
   github
-  gradle
   history-substring-search
   sudo
   systemd
@@ -65,16 +65,27 @@ source $ZSH/oh-my-zsh.sh
 
 # set Prompt
 PROMPT='
-%{$fg[white]%}%3~ %{$reset_color%}$(git_prompt_info)
+%{$fg[white]%}%3~ %{$reset_color%}$(git_super_status)
 %(?:%{$fg_bold[yellow]%} 🏝  :%{$fg_bold[red]%} 🏝  )%{$reset_color%}'
+RPROMPT='[%F{yellow}%?%f]'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}on %{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%} %{$fg[yellow]%}✗"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%}"
+ZSH_THEME_GIT_PROMPT_SEPARATOR=" |"
+ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[red]%}"
+ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[red]%}%{ ●%G%}"
+ZSH_THEME_GIT_PROMPT_CONFLICTS="%{$fg[red]%}%{ ✖%G%}"
+ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg_bold[blue]%}%{ ✚%G%}"
+ZSH_THEME_GIT_PROMPT_BEHIND="%{ ↓%G%}"
+ZSH_THEME_GIT_PROMPT_AHEAD="%{ ↑%G%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{ ?%G%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}%{ ✔%G%}"
 
 # source syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# nano alias
 alias nano='nano -w'
 
 # Git Aliases
@@ -82,7 +93,7 @@ alias gits='git status'
 alias gith='git log --oneline --abbrev-commit --all --graph --decorate'
 
 # ls Aliases
-alias ls='ls --color=auto'
+alias ls='lsd'
 alias ll='lsd -lah'
 alias l='lsd -lh'
 
