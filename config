@@ -169,6 +169,9 @@ bindsym Print exec --no-startup-id xfce4-screenshooter --fullscreen
 
 # set gaps between windows and thicker borders
 for_window [class="^.*"] border pixel 4
-gaps inner 12
+gaps inner 10
 smart_gaps on
 smart_borders on
+
+# set background picture
+exec feh --bg-fill /home/christian/Bilder/DSC03541.JPG
