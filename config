@@ -151,8 +151,8 @@ bar {
 }
 
 # set shortcuts for i3lock and rofi
-bindsym $mod+Shift+x exec i3lock -i /usr/share/backgrounds/wallpapers/2019_002.png
-bindsym $mod+d exec rofi -show run -lines 6 -eh 2 -opacity "85" -show-icons true
+bindsym $mod+Shift+x exec i3lock -i /usr/share/backgrounds/wallpapers/2019_002.png && systemctl suspend
+bindsym $mod+d exec rofi -show run -lines 10 -opacity "85" -show-icons true
 
 # set shortcuts for playerctl
 bindsym XF86AudioPlay exec --no-startup-id playerctl play
