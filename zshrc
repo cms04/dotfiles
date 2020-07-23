@@ -97,5 +97,8 @@ alias ls='lsd'
 alias ll='lsd -lah'
 alias l='lsd -lh'
 
+# gcc alias
+alias gcc='gcc -Wall -std=c99'
+
 # exec neofetch
 neofetch
