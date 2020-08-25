@@ -12,10 +12,7 @@ font pango:Inconsolata 11
 
 # exec background applications
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
 exec --no-startup-id compton --config .config/i3/compton.conf
-exec --no-startup-id blueman-applet
-exec --no-startup-id redshift-gtk
 
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
@@ -175,3 +172,5 @@ smart_borders on
 
 # set background picture
 exec feh --bg-fill /home/christian/Bilder/DSC03541.JPG
+
+exec nm-applet &!; blueman-applet &!; redshift-gtk &!
