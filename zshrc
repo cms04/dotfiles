@@ -24,10 +24,6 @@ export PATH=$PATH:'/home/christian/bin:/home/christian/scripts'
 # Short Alias for reflector
 alias reflector='sudo reflector --verbose -l 5 -p https --sort rate --save /etc/pacman.d/mirrorlist'
 
-# set evals for thefuck
-eval $(thefuck --alias)
-eval $(thefuck --alias FUCK)
-
 autoload -U colors && colors
 # Path to my oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
