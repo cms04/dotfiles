@@ -36,6 +36,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # ohmyzsh-plugins
 plugins=(
+  alias-finder
   archlinux
   command-not-found
   dirhistory
@@ -43,9 +44,11 @@ plugins=(
   docker-compose
   docker-machine
   git
+  gitignore
   git-prompt
   github
   history-substring-search
+  nmap
   sudo
   systemd
   web-search
@@ -92,9 +95,6 @@ alias gith='git log --oneline --abbrev-commit --all --graph --decorate'
 alias ls='lsd'
 alias ll='lsd -lah'
 alias l='lsd -lh'
-
-# gcc alias
-alias gcc='gcc -Wall -std=c99'
 
 # exec neofetch
 neofetch
