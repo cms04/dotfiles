@@ -122,10 +122,10 @@ mode "execute" {
 bindsym $mod+x mode "executte"
 
 # set color variables
-set $main-color #31363b
+set $main-color #2a2e32
 set $text-color #f3f4f5
 set $inactive-text-color #676e7d
-set $inactive-bg-color #31363b
+set $inactive-bg-color #2a2e32
 set $urgent-color #e52222
 
 # set main colors
